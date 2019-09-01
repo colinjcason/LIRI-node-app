@@ -51,4 +51,3 @@ Input:
 BASH: node liri.js do-what-it-says
 ```
 Output:
-img
