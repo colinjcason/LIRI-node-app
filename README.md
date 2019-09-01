@@ -14,7 +14,7 @@ Input:
 BASH: node liri.js concert-this Blink 182
 ```
 Output: 
-![concert-this-image](images/concert-this.png)
+![concert-this-image](images/concert-this.PNG)
 
 ### Movie-this
 This command will provide information about the selected movie.
