@@ -44,8 +44,12 @@ BASH: node liri.js spotify-this-song
 ```
 Output:
 
+![spotify-this-image](images/spotify-this.PNG)
+
 This command will provide info on the song "The Sign" by default, if nothing is searched
 Output:
+
+![spotify-this-default-image](images/spotify-this-default.PNG)
 
 
 ### Do-what-it-says
@@ -56,3 +60,5 @@ Input:
 BASH: node liri.js do-what-it-says
 ```
 Output:
+
+
