@@ -29,7 +29,7 @@ function run() {
                 }
 
                 var output = data.split(",");
-                search = output;
+                search = output[1];
                 spotifyThis();
             });
             break;
@@ -49,15 +49,23 @@ function concertThis() {
 function spotifyThis() {
 
     if(!search) {
-        search = "The Sign";
+        search = "The Sign Ace of Base";
     }
 
-    spotify.search({ type: 'track', query: search, limit: 1 }, function(err, data) {
+    spotify.search({ type: 'track', query: search, limit: 5 }, function(err, data) {
         if (err) {
           return console.log('Error occurred: ' + err);
         }
-       
-      console.log(data.tracks);
+
+        for(var i = 0; i < 5; ++i){
+            var results = '';
+            data.tracks.items[i].album.artists.forEach(artist => results += artist.name)
+            console.log("Artist: " + results + 
+            "\nTrack Name: " + data.tracks.items[i].name + 
+            "\nLink: " + data.tracks.items[i].preview_url + 
+            "\nAlbum: " + data.tracks.items[i].album.name + 
+            "\n--------------------------------------------");
+        }
       });
 }
 
