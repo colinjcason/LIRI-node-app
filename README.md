@@ -61,4 +61,6 @@ BASH: node liri.js do-what-it-says
 ```
 Output:
 
+![do-what-it-says](images/do-what-it-says.PNG)
+
 
