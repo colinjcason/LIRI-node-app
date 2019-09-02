@@ -37,12 +37,19 @@ function run() {
 };
 
 function concertThis() {
+    var logTxt = '';
 
     axios.get("https://rest.bandsintown.com/artists/" + search + "/events?app_id=codingbootcamp").then(function(response) {
         var event = response.data[0];
-        console.log("Venue: " + event.venue.name + 
+        logTxt += "Venue: " + event.venue.name + 
         "\nLocation: " + event.venue.city + ", " + event.venue.region + 
-        "\nDate: " + moment(event.datetime).format("MM/DD/YYYY"));
+        "\nDate: " + moment(event.datetime).format("MM/DD/YYYY");
+        console.log(logTxt);
+        fs.appendFile("log.txt", logTxt, function(err) {
+            if(err) {
+                return console.log(err);
+            }
+        });    
     });
 }
 
