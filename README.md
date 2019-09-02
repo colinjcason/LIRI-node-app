@@ -40,13 +40,14 @@ This will provide information on a song and provide up to 5 results.
 
 Input:
 ```
-BASH: node liri.js spotify-this-song
+BASH: node liri.js spotify-this-song Holy
 ```
 Output:
 
 ![spotify-this-image](images/spotify-this.PNG)
 
-This command will provide info on the song "The Sign" by default, if nothing is searched
+If nothing is entered into the search command, the app will provide info on the song "The Sign" by Ace of Base.
+
 Output:
 
 ![spotify-this-default-image](images/spotify-this-default.PNG)
@@ -60,5 +61,7 @@ Input:
 BASH: node liri.js do-what-it-says
 ```
 Output:
+
+![do-what-it-says](images/do-what-it-says.PNG)
 
 
